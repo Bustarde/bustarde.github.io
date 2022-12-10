@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet JS Online Map</title>
+
+    <!-- CSS LeafletJS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+
+    <!-- Javascript LeafletJS -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+</head>
+<style>
+    #map {
+        width: 1350px;
+        height: 500px;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 40px solid;
+        color: rgb(40, 36, 36);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+</style>
+
+<body>
+    <h1>Top 10 Places That I Want To Visit</h1>
+    <div id="map"></div>
+
+    <script>
+        var map_center = [10.3392, 123.8537];
+        var mapOptions = {
+            center: map_center,
+            zoom: 5.5
+        }
+        var map = L.map('map', mapOptions);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 12,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        // Locations
+        var circle = L.circle([46.80254817488302, 8.112001442397164], {
+            color: 'blue',
+            fillColor: 'yellow',
+            fillOpacity: 0.5,
+            radius: 700
+        }).addTo(map);
+        var popup = L.popup()
+            .setLatLng([46.80254817488302, 8.112001442397164])
+            .setContent("1. Switzerland ")
+            .addTo(map);
+
+        var circle = L.circle([64.98317122017237, -18.501362218692908], {
+            color: 'blue',
+            fillColor: 'yellow',
+            fillOpacity: 0.5,
+            radius: 700
+        }).addTo(map);
+        var popup = L.popup()
+            .setLatLng([64.98317122017237, -18.501362218692908])
+            .setContent("2. Iceland")
+            .addTo(map);
+
+        var circle = L.circle([42.99740699588035, 12.80797383879374], {
+            color: 'blue',
+            fillColor: 'yellow',
+            fillOpacity: 0.5,
+            radius: 700
+        }).addTo(map);
+        var popup = L.popup()
+            .setLatLng([42.99740699588035, 12.80797383879374])
+            .setContent("3. Italy")
+            .addTo(map);
+
+        var circle = L.circle([46.625396882404324, 2.2482952688458835], {
+            color: 'blue',
+            fillColor: 'yellow',
+            fillOpacity: 0.5,
+            radius: 700
+        }).addTo(map);
+        var popup = L.popup()
+            .setLatLng([46.625396882404324, 2.2482952688458835])
+            .setContent("4. France")
+            .addTo(map);
+
+        var circle = L.circle([61.98326664733275, 9.568240598816018], {
+            color: 'blue',
+            fillColor: 'yellow',
+            fillOpacity: 0.5,
+            radius: 700
+        }).addTo(map);
+        var popup = L.popup()
+            .setLatLng([61.98326664733275, 9.568240598816018])
+            .setContent("5. Norway")
+            .addTo(map);
+
+        var circle = L.circle([39.073120920741175, 21.833922212487284], {
+            color: 'blue',
+            fillColor: 'yellow',
+            fillOpacity: 0.5,
+            radius: 700
+        }).addTo(map);
+        var popup = L.popup()
+            .setLatLng([39.073120920741175, 21.833922212487284])
+            .setContent("6. Greece")
+            .addTo(map);
+
+        var circle = L.circle([39.50271760474089, -3.435127377627794], {
+            color: 'blue',
+            fillColor: 'yellow',
+            fillOpacity: 0.5,
+            radius: 700
+        }).addTo(map);
+        var popup = L.popup()
+            .setLatLng([39.50271760474089, -3.435127377627794])
+            .setContent("7. Spain")
+            .addTo(map);
+
+        var circle = L.circle([51.24517077917321, 9.71659943449056], {
+            color: 'blue',
+            fillColor: 'yellow',
+            fillOpacity: 0.5,
+            radius: 700
+        }).addTo(map);
+        var popup = L.popup()
+            .setLatLng([51.24517077917321, 9.71659943449056])
+            .setContent("8. Germany")
+            .addTo(map);
+
+        var circle = L.circle([36.72879864662176, 139.2821215368837], {
+            color: 'blue',
+            fillColor: 'yellow',
+            fillOpacity: 0.5,
+            radius: 700
+        }).addTo(map);
+        var popup = L.popup()
+            .setLatLng([36.72879864662176, 139.2821215368837])
+            .setContent("9. Japan")
+            .addTo(map);
+
+        var circle = L.circle([-24.523045138860414, 134.24763892726233], {
+            color: 'blue',
+            fillColor: 'yellow',
+            fillOpacity: 0.5,
+            radius: 700
+        }).addTo(map);
+        var popup = L.popup()
+            .setLatLng([-24.523045138860414, 134.24763892726233])
+            .setContent("10. Australia")
+            .addTo(map);
+
+
+        var latlngs = [
+        [[30.26203909026256, -109.04024175013203],
+        [49.93151947612021, -99.63342794292592],
+        [30.71238438208264, -86.77744907307759]],
+        
+        [[39.164042934027144, -105.15407682806824],
+        [38.90464838486595, -102.20117017138362],
+        [38.70910820643713, -91.70107024664824]],
+        ];
+
+        var polyline = L.polyline(latlngs, {color: 'red'}).addTo(map);
+
+    </script>
+</body>
+
+
+</html>
